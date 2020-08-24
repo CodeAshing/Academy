@@ -1,0 +1,8 @@
+
+.center{  
+    width: 100%;
+}
+.image {
+    height:749px;
+    object-fit: contain;
+}

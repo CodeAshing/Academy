@@ -1,0 +1,185 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
+}
+nav{background: #000046;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #1CB5E0, #000046);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #1CB5E0, #000046); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+ 
+  position: relative;
+  opacity: 80%;
+  height: 80px;
+  width: 100%;
+
+  
+}
+label.logo{
+  color: #f2f2f2;
+  font-size: 33px;
+  line-height: 80px;
+  padding: 0 140px;
+  font-weight: 600;
+  font-family: 'Poppins', sans-serif;
+}
+nav ul{
+  float: right;
+  margin-right: 60px;
+}
+nav ul li{
+  display: inline-block;
+  line-height: 80px;
+  margin: 0 2px;
+}
+nav ul li a{
+  color: white;
+  font-weight: 500;
+  font-size: 15px;
+  padding: 7px 13px;
+  border-radius: 3px;
+  /* text-transform: uppercase; */
+  font-family: 'Poppins', sans-serif;
+}
+a.active,a:hover{
+  background: white;
+  transition: .5s;
+  color: #000046;
+}
+.checkbtn{
+  font-size: 30px;
+  color: white;
+  float: right;
+  line-height: 80px;
+  margin-right: 40px;
+  cursor: pointer;
+  display: none;
+}
+#check{
+  display: none;
+}
+@media (max-width: 952px){
+  label.logo{
+    font-size: 27px;
+    padding-left: 25px;
+  }
+  nav ul li a{
+    font-size: 16px;
+  }
+}
+@media (max-width: 858px){
+  .checkbtn{
+    display: block;
+    margin-right: 40px;
+  }
+  ul{
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    background: #2c3e50;
+    top: 80px;
+    left: -100%;
+    text-align: center;
+    transition: all .5s;
+  }
+  nav ul li{
+    display: block;
+    margin: 50px 0;
+    line-height: 30px;
+  }
+  nav ul li a{
+    font-size: 20px;
+  }
+  a:hover,a.active{
+    background: none;
+    color: #0082e6;
+  }
+  #check:checked ~ ul{
+    left: 0;
+  }
+}
+section{
+  background: url(bg1.jpg) no-repeat;
+  background-size: cover;
+  height: calc(100vh - 80px);
+}
+.content{
+    background-image:linear-gradient(rgba(-5, -5, -5, 0.8),rgba(-2, -2, -2, 0.5)), url('bg.jpg');
+    background-size: cover; 
+    height: 100vh;
+    image-resolution: 300dpi;
+    
+
+}
+button{
+    background-color: rgb(82, 127, 194);
+    color: white;
+    font-weight: bold;
+    text-align: center;
+    align-items: center;
+    padding:20px;
+    border-radius: 20px;
+    float: left;
+    margin-left: 16cm;
+    margin-top: 3cm;
+    
+}
+pre{
+    margin-top: 5cm;
+    word-spacing: 0.1cm;
+    line-height: 1cm;
+}
+
+@keyframes transitionIn{
+  from{
+    opacity: 0;
+    transform: rotateY(-40deg) ;
+
+  }
+  to{    
+    opacity: 1;
+    transform: rotateX(0) ;
+
+  }
+}
+
+@keyframes transitionIn1{
+  from{
+    opacity: 0;
+    transform: rotateY(-30deg) ;    
+    transform: rotateX(+40deg);
+
+  }
+  to{    
+    opacity: 1;
+    transform: rotateX(0) ;
+
+  }
+}
+
+@keyframes transitionIn2{
+  from{
+    opacity: 0;
+    transform: rotateY(-30deg) ;    
+    transform: rotatez(+40deg);
+
+  }
+  to{    
+    opacity: 1;
+    transform: rotateX(0) ;
+
+  }
+}
+
+.moved{
+    animation: transitionIn 2s;
+}
+.moved1{
+    animation: transitionIn1 2s;
+}.moved2{
+    animation: transitionIn2 2s;
+}   
+        
+        

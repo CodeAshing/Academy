@@ -1,0 +1,79 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="form.css">
+    <title>registration</title>
+</head>
+<body>
+    <form action="index.html">
+
+        <h1 style="text-align: center; color: rgb(0, 34, 128); font-family: Arial, Helvetica, sans-serif;" ><u>STUDENT REGISTRATION FORM </u></h1>
+        <table>
+            <tr>
+                <td> <label>FIRST NAME</label></td>
+                <td>&nbsp;&nbsp;</td>
+                <td> <input type="text" placeholder="Enter first name" id="first" maxlength="30" pattern="[a-z A-Z]+" required ></td>
+             </tr>
+        
+            <tr>
+                <td> <label>LAST NAME</label></td>
+                <td></td>
+                <td> <input type="text" placeholder="Enter Last name" id="last" maxlength="30" pattern="[a-z A-z]+" required></td>
+            </tr>
+
+            <tr>
+       
+                <td><label>GENDER</label></td>
+                <td></td>
+               <td>Male <input type="radio" value="Male" name="GENDER">
+                Female<input type="radio" value="Female" name="GENDER"></td>
+            
+            </tr>
+
+             <tr>
+                <td><label>Department</label></td>
+                <td></td>
+                <td>
+                    <input id="depart" name="depart" placeholder="Department" list="Depart">
+                    <datalist id="Depart" >
+                       <option value="Mathematics" >Mathematics</option>
+                        <option value="Biology">Biology</option>
+                        <option value="Physics">Physics</option>
+                        <option value="Arts">Arts</option>
+                        <option value="Computer Science">Computer Science</ption>
+                        <option value="Chemistry">Chemistry</option>
+                        
+                    </datalist>
+                    
+                   </td>
+         </tr>
+       
+         <tr>
+            <td><label>MOBILE NUMBER</label></td>
+            <td></td>
+            <td><input type="text" placeholder="Enter mobile numer" maxlength="10" id="mobile"></td>
+      
+        </tr>
+        <br>
+        <tr>
+            <td><label for="address">ADDRESS: </label></td>
+            <td></td>
+            <td><textarea id="address" name="address" rows="4" cols="30"></textarea> </td>
+        </tr>
+        <tr>
+      
+            <td><label>CITY</label></td>
+            <td></td>
+            <td><input type="text" placeholder="Enter city name" pattern="[a-z A-Z]+" maxlength="30" ></td>
+       
+        </tr>
+        <br>
+       
+        </table>
+        <input id="submit" type="submit" value="Submit">
+                <input id="reset" type="reset" value="Reset">
+
+    </form>
+</body>
+</html>

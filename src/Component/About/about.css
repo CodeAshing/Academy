@@ -1,0 +1,34 @@
+.about{
+        margin: 0 0 4.5rem;
+    font-size: 4rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: antiquewhite;
+    text-align: center;
+    font-family: athelas, georgia, serif; 
+    
+}
+.bg{
+  background: #373B44;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #4286f4, #373B44);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #4286f4, #373B44); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+border-width: .5rem;
+}
+.f3{
+    color: white;
+    font-family: athelas, georgia, serif; 
+}
+.bw3 { 
+    padding: 10px;
+ }
+ .grow {
+  -moz-osx-font-smoothing: grayscale;
+  backface-visibility: hidden;
+  transform: translateZ(0);
+  transition: transform 0.25s ease-out;
+}
+
+.grow:hover,
+.grow:focus {
+  transform: scale(1.05);
+}
