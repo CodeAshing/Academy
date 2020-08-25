@@ -115,7 +115,5 @@
     </div>
 <script type="text/javascript" src="../Particles/particles.min.js"></script>
 <script type="text/javascript" src="../Particles/app.js"></script>
-
-
   </body>
 </html>

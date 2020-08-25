@@ -24,9 +24,10 @@ if(isset($_POST['submit'])){
         if($row == 1){
             echo "login successful";
             $_SESSION['user'] = $user;
-            header('location:../Admin/Admin.php');
+            header('location:../Admin/index.php');
         }else{
             echo "Login Failed";
         }
 }
+
 ?>
