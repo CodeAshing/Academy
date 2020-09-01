@@ -5,58 +5,45 @@ $db=mysqli_select_db($connect,'Samrib');
 $query = "SELECT * FROM Register ORDER BY id DESC";
 $result = mysqli_query($connect, $query);
 ?>
-<!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
 	<title>Admin</title>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-<!--===============================================================================================-->	
-	<link rel="icon" type="image/png" href="images/icons/favicon.ico"/>
-<!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="vendor/bootstrap/css/bootstrap.min.css">
-<!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="fonts/font-awesome-4.7.0/css/font-awesome.min.css">
-<!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="vendor/animate/animate.css">
-<!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="vendor/select2/select2.min.css">
-<!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="vendor/perfect-scrollbar/perfect-scrollbar.css">
-<!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="css/util.css">
-	<link rel="stylesheet" type="text/css" href="css/main.css">
-<!--===============================================================================================-->
-   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
-    <link rel="stylesheet" href="https://unpkg.com/tachyons@4.12.0/css/tachyons.min.css"/>
+	<link rel="stylesheet" href="admin.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" />  
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>            
 	<script src="jquery.tabledit.min.js"></script>
 	
+    <link rel="stylesheet" href="https://unpkg.com/tachyons@4.12.0/css/tachyons.min.css"/>
+	
 </head>
-<body class="">
-	<div class="pa3 flex center bt ">
-		<a href="logout.php" class="btn w-10  fl btn-primary btn-lg active" role="button" aria-pressed="true">LOGOUT</a>
-	</div>
-	<div class="limiter ">
-		<div class="container-table100 bg ">
-			<div class="wrap-table100 w-80 ">
-				<div class="table100 ver6 m-b-110">
-					<table id="editable_table" data-vertable=" ver6">
-						<thead>
-							<tr class="row100 head">
-								<th class="column100 column1" data-column="column1">ID</th>
-								<th class="column100 column2" data-column="column2">First Name</th>
-								<th class="column100 column3" data-column="column3">Last Name</th>
-								<th class="column100 column4" data-column="column4">Email</th>
-								<th class="column100 column5" data-column="column5">Department</th>
-								<th class="column100 column6" data-column="column6">CNIC</th>
-								<th class="column100 column7" data-column="column7">City</th>
-								<th class="column100 column8" data-column="column8">Country</th>
-								<th class="column100 column9" data-column="column9">Age</th>
-								<th class="column100 column10" data-column="column10">Father</th>
-								<th class="column100 column11" data-column="column11">Gender</th>
-								<th class="column100 column12" data-column="column12">Address</th>
+<body >
+
+    <div id="particles-js" class="h-100 w-100" ></div>
+
+	<div class="position pa6 w-100">
+		<a href="logout.php" class="btn  fl btn-primary btn-lg active" role="button" aria-pressed="true">LOGOUT</a>
+		
+  <div class="container w-80 center">  
+   <br />  
+   <br />  
+   <br />  
+            <div class="table-responsive" >  <br />  
+    <table id="editable_table" class="table odd table-bordered table-striped">
+     <thead>
+      <tr class="font">
+								<th>ID</th>
+								<th>First Name</th>
+								<th>Last Name</th>
+								<th>Email</th>
+								<th>Department</th>
+								<th>CNIC</th>
+								<th>City</th>
+								<th>Country</th>
+								<th>Age</th>
+								<th>Father</th>
+								<th>Gender</th>
+								<th>Address</th>
 							</tr>
 						</thead>
 						<tbody>
@@ -65,39 +52,31 @@ $result = mysqli_query($connect, $query);
      while($row = mysqli_fetch_array($result))
      {
       echo '
-	  <tr class="row100">
-		  <td class="column100 column1" data-column="column1">'.$row["id"].'</td>
-		  <td class="column100 column2" data-column="column2">'.$row["first"].'</td>
-		  <td class="column100 column3" data-column="column3">'.$row["last"].'</td>
-		  <td class="column100 column4" data-column="column4">'.$row["email"].'</td>
-		  <td class="column100 column5" data-column="column5">'.$row["depart"].'</td>
-		  <td class="column100 column6" data-column="column6">'.$row["cnic"].'</td>
-		  <td class="column100 column7" data-column="column7">'.$row["city"].'</td>
-		  <td class="column100 column8" data-column="column8">'.$row["country"].'</td>
-		  <td class="column100 column9" data-column="column9">'.$row["age"].'</td>
-		  <td class="column100 column10" data-column="column10">'.$row["father"].'</td>
-		  <td class="column100 column11" data-column="column11">'.$row["gender"].'</td>
-		  <td class="column100 column12" data-column="column12">'.$row["address"].'</td>
+	  <tr>
+		  <td>'.$row["id"].'</td>
+		  <td>'.$row["first"].'</td>
+		  <td>'.$row["last"].'</td>
+		  <td>'.$row["email"].'</td>
+		  <td>'.$row["depart"].'</td>
+		  <td>'.$row["cnic"].'</td>
+		  <td>'.$row["city"].'</td>
+		  <td>'.$row["country"].'</td>
+		  <td>'.$row["age"].'</td>
+		  <td>'.$row["father"].'</td>
+		  <td>'.$row["gender"].'</td>
+		  <td>'.$row["address"].'</td>
 	  </tr>
       ';
      }
      ?>	
-						</tbody>
-					</table>
-				</div>
-			</div>
+	</tbody>
+	</table>
+   </div>  
+  </div> 
+
+<script type="text/javascript" src="../Particles/particles.min.js"></script>
+<script type="text/javascript" src="../Particles/app.js"></script>
 		</div>
-	</div>
-	
-	
-	<!--===============================================================================================-->
-		<script src="vendor/bootstrap/js/popper.js"></script>
-		<script src="vendor/bootstrap/js/bootstrap.min.js"></script>
-	<!--===============================================================================================-->
-		<script src="vendor/select2/select2.min.js"></script>
-		<!--===============================================================================================-->
-		<script src="js/main.js"></script>
-		
 </body>
 </html>
 		
